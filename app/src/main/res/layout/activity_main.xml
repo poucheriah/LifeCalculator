@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/Instructions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Please enter at least two of the given info: "
+        app:layout_constraintBottom_toTopOf="@+id/birthdateTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/birthdateTxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="Birthdate: (yyyy-MM-dd)"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/deathdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Instructions" />
+
+    <EditText
+        android:id="@+id/deathdate"
+        android:layout_width="317dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:hint="DeathDate: (yyyy-MM-dd)"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/livedForYears"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthdateTxt" />
+
+    <EditText
+        android:id="@+id/livedForYears"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="Years Lived (#)"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/calcBttn"
+        app:layout_constraintEnd_toStartOf="@+id/livedForDays"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deathdate" />
+
+    <EditText
+        android:id="@+id/livedForDays"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:ems="10"
+        android:hint="Days Lived (#)"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/livedForYears"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/livedForYears"
+        app:layout_constraintTop_toTopOf="@+id/livedForYears" />
+
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcBttn" />
+
+    <Button
+        android:id="@+id/calcBttn"
+        android:layout_width="226dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toTopOf="@+id/resultTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/livedForYears"
+        tools:text="Calculate" />
+
+    <android.support.constraint.Constraints
+        android:id="@+id/constraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
