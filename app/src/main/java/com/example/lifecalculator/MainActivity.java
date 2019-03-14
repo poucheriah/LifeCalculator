@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                     LocalDate birthdate = LocalDate.parse(birthdateTxt.getText().toString());
                     LocalDate deathDate = birthdate.plusYears(yearsLived).plusDays(daysLived);
                     resultTxt.setText("They died on " + deathDate.toString());
+                }else{
+                    resultTXT.setText("Did not give enough information in proper format. Must give years AND days if chosen.");    
                 }
             }
         });
